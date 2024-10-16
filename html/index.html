@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Data Heatmap</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        #map {
+            height: 90vh; /* Takes 90% of the viewport height */
+            width: 100%;  /* Full width */
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.9); /* Slight transparency for better visibility */
+        }
+
+        h1 {
+            margin-right: 20px;
+        }
+
+        label, select, input, span {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <h1>Coffee Data Heatmap</h1>
+        <label for="dataset">Select Dataset:</label>
+        <select id="dataset">
+            <option value="arabica_production">Arabica Production</option>
+            <option value="green_coffee_bean_exports">Green Coffee Exports</option>
+            <option value="soluble_coffee_exports">Soluble Coffee Exports</option>
+            <option value="total_coffee_exports">Total Coffee Exports</option>
+        </select>
+
+        <label for="year">Select Year:</label>
+        <input type="range" id="year" min="2019" max="2024" value="2019" step="1">
+        <span id="yearValue">2019/20</span>
+    </div>
+
+    <div id="map"></div> <!-- Div for the Leaflet map -->
+
+    <script src="script.js"></script> <!-- Link to your external JavaScript file -->
+</body>
+</html>
