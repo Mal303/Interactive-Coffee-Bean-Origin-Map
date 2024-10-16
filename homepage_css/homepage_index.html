@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function spin() {
+            const wheel = document.querySelector('.wheel');
+            const deg = Math.floor(5000 + Math.random() * 5000);
+            wheel.style.transition = 'all 5s ease-out';
+            wheel.style.transform = `rotate(${deg}deg)`;
+
+            setTimeout(() => {
+                const selectedSegment = Math.floor((deg % 360) / 45);
+                showPopup(selectedSegment);
+            }, 5000);
+        }
+
+        function showPopup(segment) {
+            const popups = [
+                "Brazil. Flavor profile: Soft, Mild, Nutty, Chocolatey, Medium Bodied, Low Acidity. Roasting suggestions: Light, Medium, Dark. Brewing suggestions: Espresso, French Press, Moka Pot, Cold Brew.",
+                "Vietnam. Flavor profile: Chocolate, Sweet Berries, Smoky, Mild Acidity Roasting suggestions: Medium, Dark, Super Dark. Brewing suggestions: Phin, Espresso, Drip, French Press.",
+                "Colombia. Flavor profile: Mild, Well-balanced, Tropical Fruits & Floral Notes, Medium to High Acidity, Medium body. Roasting suggestions: Light, Medium, Dark. Brewing suggestions: Espresso, Aeropress, French Press",
+                "Indonesia. Flavor profile:•	Sumatra coffee has a heavy body, low acidity, and earthy, spicy flavors.•	Sulawesi coffees have a smoother mouthfeel, a more woody aroma, and a fruitier taste.•	Arabica beans from Java are known for their rich spiciness and earthy sweetness. Roasting suggestions: Medium, Dark. Brewing suggestions: Espresso, Aeropress, Moka Pot, Drip.",
+                "Ethiopia. Flavor profile: Bright, Winey, Fruity, Floral, Citrusy, Light to Medium Body. Roasting suggestions: Light, Medium. Brewing suggestions: Pour Over, Drip, Cold Brew.",
+                "Honduras. Flavor profile: Caramel, Chocolatey, Nutty, Fruity, Berries, Round & Medium Body, Soft & Balanced Acidity. Roasting suggestions: Light, Medium, Dark. Brewing suggestions: Espresso, Drip, Pour Over, French Press.",
+                "India. Flavor profile: Mild, Balanced, Sweet, Low to Moderate Acidic, with occasional notes of Spice, Chocolates, Nuts. Roasting suggestions: Medium, Dark, Super-Dark. Brewing suggestions: South Indian Filter, Espresso, Moka Pot, Aeropress, French Press.",
+                "Uganda. Flavor profile: Chocolate, Peach, Apricot, Berries, Citrus, Light to Medium Body. Roasting suggestions: Medium, Dark. Brewing suggestions: Espresso, Aeropress, French Press."
+            ];
+            alert(popups[segment]);
+        }
+    </script>
+    <title>Interactive Coffee Hub</title>
+</head>
+<h1>Home Page/Flavor Wheel</h1>
+
+<body>
+    <div class="dropdown">
+        <button>Flavor Wheel/HOME</button>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button>Interactive Coffee Bean Map</button>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button>Coffee Exports/Imports Map</button>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button>Arabica/Robusta Production Map</button>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+
+
+    <h2>Flavor Wheel</h2>
+    <p>The top 8 coffee producing countries. Spin the wheel to view a brief coffee bean summary. 
+    The flavor profiles describe those slight pallet characteristics. 
+    As well as roasting and brewing suggestions for best coffee taste. </p>
+
+    <h2>Interactive Coffee Bean Map</h2>
+    <p>Paragraph 2</p>
+
+    <h2>Coffee Exports/Imports Map</h2>
+    <p>Paragraph 3</p>
+
+    <h2>Arabica/Robust Production Map</h2>
+    <p>Paragraph 4</p>
+
+
+    <div class="wheel">
+        <div class="segment-text">Brazil</div>
+        <div class="segment-text">Vietnam</div>
+        <div class="segment-text">Columbia</div>
+        <div class="segment-text">Indonesia</div>
+        <div class="segment-text">Ethiopia</div>
+        <div class="segment-text">Honduras</div>
+        <div class="segment-text">India</div>
+        <div class="segment-text">Uganda</div>
+    </div>
+    <div class="arrow"></div>
+    <button id="spin" onclick="spin()">SPIN</button>
+
+    <h2>References</h2>
+    <ul>
+        <li>Home Grounds. (n.d.). World coffee map. Home Grounds. Retrieved October 16, 2024, from https://www.homegrounds.co/world-coffee-map/#:~:text=Ever%20wondered%20where%20the%20coffee%20beans</li>
+        <li>"Certain segments of this code were generated with assistance from Microsoft Copilot, (personal communication, October 14, 2024)."</li>
+    
+</body>
+</html>
