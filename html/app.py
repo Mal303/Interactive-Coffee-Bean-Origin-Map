@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for the entire app
+CORS(app)  # Enable CORS for the entire app-
 
 # Get database URL from environment variable
 database_url = os.getenv('DATABASE_URL')
