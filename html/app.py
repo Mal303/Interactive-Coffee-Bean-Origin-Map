@@ -39,22 +39,22 @@ def get_table_data(table_name):
     return data
 
 @app.route('/robusta_production', methods=['GET'])
-def get_arabica_production_data():
+def get_robusta_production_data():
     data = get_table_data('robusta_production')
     return jsonify(data)
 
 @app.route('/green_coffee_bean_imports', methods=['GET'])
-def get_green_coffee_export_data():
+def get_green_coffee_import_data():
     data = get_table_data('green_coffee_bean_imports')
     return jsonify(data)
 
 @app.route('/soluble_coffee_imports', methods=['GET'])
-def get_soluble_coffee_export_data():
+def get_soluble_coffee_import_data():
     data = get_table_data('soluble_coffee_imports')
     return jsonify(data)
 
 @app.route('/total_coffee_imports', methods=['GET'])
-def get_total_coffee_export_data():
+def get_total_coffee_import_data():
     data = get_table_data('total_coffee_imports')
     return jsonify(data)
 
