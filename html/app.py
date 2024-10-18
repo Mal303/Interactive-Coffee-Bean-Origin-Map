@@ -40,7 +40,7 @@ def get_table_data(table_name):
 
 @app.route('/robusta_production', methods=['GET'])
 def get_robusta_production_data():
-    data = get_table_data('robusta_production')
+    data = get_table_data('robusta_coffee_production')
     return jsonify(data)
 
 @app.route('/green_coffee_bean_imports', methods=['GET'])
