@@ -18,9 +18,10 @@ Use Leaflet.js or Google Maps API to create an interactive map showing coffee be
 Allow users to click on a region to get more detailed information about that region’s coffee, such as flavor profiles, production methods, and altitude.
 Users could explore coffee-growing regions, see what flavors are typical of certain countries, and compare beans from different origins.
 
-Coffee Production and Export:
+Arabica Production and Coffee Exports:
 
-Heat map that allows users to filter by year or region to see how production has changed over time.
+Uses leaflet to create an interactive map showing where Arabica coffee is produced and total exports for soluble coffee, green coffee beans and the total coffee exports. Allows user to see a 
+heat map showing the regions where Arabica coffee is produced and where coffee is exported throughout the years. Visualizing the differences through the years in the different regions for coffee data.
 
 Coffee and Climate Visualization:
 
